@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import LatestProjects from './components/LatestProjects';
+import ListingDetail from './components/ListingDetail';
+import Layout from './components/UI/Layout';
+import Showcase from './components/UI/Showcase';
+import AddProperty from './pages/AddProperty';
+import Auth from './pages/Auth';
+import Buy from './pages/Buy';
+import Rent from './pages/Rent';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Switch>
+        <Route
+          path="/"
+          exact
+          render={() => (
+            <Layout>
+              <Showcase />
+              <LatestProjects />
+            </Layout>
+          )}
+        />
+
+        <Route path="/auth" exact component={Auth} />
+        <Route path="/buy" exact component={Buy} />
+        <Route path="/posts/:id" exact component={ListingDetail} />
+        <Route path="/rent" exact component={Rent} />
+        <Route path="/add-property" exact component={AddProperty} />
+      </Switch>
     </div>
   );
 }

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import 'variables';
+
+@import 'pages';
+@import 'components';
+@import 'layout';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  // font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+img {
+  width: 100%;
+}
+
+.button {
+  background-color: $white;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 10px;
+  transition: 0.2s all ease;
+
+  &:hover {
+    background: $bg-hover-primary;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+
+  border-right: medium none;
+  border-bottom: medium none;
+  border-left: medium none;
+  border-top: 0.0625rem solid $border-secondary;
+  margin: 3rem 0px;
+}
+
+textarea {
+  min-height: calc(6rem);
+  max-height: calc(10.5rem);
+}
+
+.form-input {
+  margin: 1rem 0;
+  /* Chrome, Safari, Edge, Opera */
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  /* Firefox */
+
+  input[type='number'],
+  input,
+  textarea {
+    width: 100%;
+    border-radius: 0.5rem;
+    -moz-appearance: textfield;
+    border: 1px solid $border-selected;
+    padding: 1rem;
+
+    &::placeholder {
+      text-align: right;
+      font-size: medium;
+    }
+
+    &:focus {
+      outline: none;
+      border: 2px solid $border-selected;
+    }
+  }
+}
+
+.search-input {
+  input {
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    padding: 0.75rem;
+
+    &:focus {
+      background-color: $bg-hover-primary;
+    }
+
+    &:hover {
+      background-color: $bg-hover-primary;
+    }
+  }
+}

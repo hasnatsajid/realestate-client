@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+.footer {
+  width: 100%;
+
+  &__social {
+    background-color: $primary-blue;
+    text-align: center;
+    padding: 7px;
+
+    &-link {
+      font-size: 20px;
+      margin: 0 1rem;
+
+      svg {
+        color: $white;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &__hassuu {
+    background-color: black;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+
+    * {
+      color: white;
+    }
+
+    .intro {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .created {
+      margin-right: 2rem;
+    }
+
+    .hassuu {
+      display: flex;
+      align-items: center;
+      font-family: 'Lora', serif;
+
+      span {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &__about {
+    background-color: $dark-blue;
+    color: $white;
+
+    &-wrapper {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem 0;
+
+      @media (max-width: 798px) {
+        flex-direction: column;
+      }
+    }
+
+    .heading {
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .link {
+      padding: 3px 0;
+    }
+
+    &-company {
+      display: flex;
+      width: 50%;
+      justify-content: space-around;
+
+      @media (max-width: 798px) {
+        width: 100%;
+      }
+    }
+
+    &-newsletter {
+      width: 35%;
+
+      .email-holder {
+        input {
+          // width: 80%;
+          padding: 10px 20px 10px 5px;
+          border-radius: 10px;
+          //   font-weight: bold;
+          font-family: Arial, Helvetica, sans-serif;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      @media (max-width: 798px) {
+        width: 100%;
+        margin-top: 5%;
+      }
+    }
+
+    @media (max-width: 798px) {
+      font-size: 12px;
+    }
+  }
+}

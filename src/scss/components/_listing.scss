@@ -1,0 +1,81 @@
+.listing {
+  background-color: $white;
+  border-radius: 0.75rem;
+  margin: 2.5rem 0;
+  // width: max-content;
+  max-width: 640px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0.0625rem 0.25rem 0px;
+  cursor: pointer;
+
+  &__container {
+    // border: 1px solid $primary-blue;
+  }
+
+  &__featured-img {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__agent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    font-weight: 600;
+    height: 60px;
+    max-height: 60px;
+
+    &-name {
+      span {
+        margin-right: 0.5rem;
+      }
+    }
+
+    &-company {
+      & > span,
+      img {
+        width: 100%;
+        max-height: 50px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &__details {
+    padding: 0.5rem;
+
+    &-price {
+      font-size: large;
+      font-weight: 600;
+    }
+
+    &-title {
+      padding: 0.5rem 0;
+    }
+
+    &-additional {
+      display: flex;
+
+      .prop {
+        display: flex;
+        margin-right: 5px;
+      }
+
+      span {
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+      }
+
+      svg {
+        font-size: large;
+        margin-right: 3px;
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 3px 6px rgba(30, 41, 61, 0.15), 0px 5px 10px rgba(30, 41, 61, 0.15);
+  }
+}

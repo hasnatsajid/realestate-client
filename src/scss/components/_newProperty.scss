@@ -1,0 +1,174 @@
+.new-property {
+  margin-bottom: 2rem;
+
+  .option-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .option {
+      width: max-content;
+      width: -moz-available;
+      text-align: center;
+      padding: 1rem;
+      color: $text-secondary;
+      position: relative;
+      border-bottom: 0.125rem solid $text-gray;
+
+      &:not(:last-child) {
+        margin-right: 0.3rem;
+      }
+
+      &.active {
+        color: $black;
+        border-bottom: 0.125rem solid $red;
+      }
+    }
+  }
+
+  .detail-wrapper {
+    width: 100%;
+    max-width: 660px;
+    margin: 7% auto;
+    color: $primary-text;
+
+    * {
+      font-family: 'Lato', sans-serif;
+      font-size: 1rem;
+    }
+  }
+
+  .property-details,
+  .property-amenities,
+  .property-pricing,
+  .property-description,
+  .property-images,
+  .property-contact {
+    h1 {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin: 1rem 0;
+    }
+
+    .sub-title {
+      margin: 1rem 0;
+    }
+  }
+
+  .property-details,
+  .property-pricing {
+    max-width: 21.5rem;
+
+    .types {
+      select {
+        color: $primary-text;
+        width: 200px;
+        max-width: 200px;
+        border-radius: 0.5rem;
+        border: 1px solid $primary-text;
+        background-color: $white;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+
+        option {
+          color: $primary-text;
+        }
+      }
+    }
+
+    .beds,
+    .baths,
+    .parking {
+      display: flex;
+      justify-content: space-between;
+
+      .counter {
+        display: flex;
+        font-weight: 600;
+        align-items: center;
+        width: 40%;
+        justify-content: space-between;
+
+        .plus,
+        .minus {
+          border: 1px solid $primary-text;
+          border-radius: 50px;
+          padding: 0.2rem;
+          width: 2rem;
+          height: 2rem;
+          font-size: 1rem;
+          text-align: center;
+          line-height: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .property-amenities {
+    accent-color: $primary-text;
+
+    .amenities-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      .amenity {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        .checkbox {
+          margin-right: 1rem;
+          input {
+            // border: none;
+            // outline: 1px solid $border-secondary;
+          }
+        }
+      }
+    }
+  }
+
+  .property-submit {
+    text-align: right;
+    text-align: -moz-right;
+
+    .submit-btn {
+      max-width: 11rem;
+
+      button {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-variation-settings: 'XTDR' 0, 'APRT' 0, 'SPAC' 0;
+        font-weight: 600;
+        display: flex;
+        -moz-box-align: center;
+        align-items: center;
+        -moz-box-pack: center;
+        justify-content: center;
+        flex-shrink: 0;
+        position: relative;
+        outline: currentcolor none medium;
+        width: 100%;
+        background-color: #e4002b;
+        color: #ffffff;
+        border-radius: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        margin: 0px;
+        cursor: pointer;
+        text-decoration: none;
+        min-height: 3rem;
+        min-width: 3rem;
+        border: none;
+
+        &:hover {
+          background-color: #a81e35;
+        }
+      }
+    }
+  }
+}
